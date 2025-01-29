@@ -1,19 +1,211 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root{
+    --cor1: #9EE493;
+    --cor2: #2B2D42;
+    --cor3: #21897E;
+    --cor4: #B8B3E9;
+    --cor5: #f0f5fd;
+    --cor6: #D4DCFF;
+    --cor7: #4E598C;
+}
+
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family:  'Ubuntu', 'Gill Sans', 'Gill Sans MT', sans-serif;
 }
 
-body{    
+body{
     display: flex;
-    background: #D4DCFF;
-    min-height: 100vh;
+    height: 100vh;
+    background: var(--cor5);
 }
 
-.barra-lateral{
+.secao-lateral{
+    background: #fff;
+    width: 170px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #ffffff;
-    height: 100vh;
-    width: 170px;
+    justify-content: space-between;
+    height: 100%;
+    padding: 25px 10px;
+    transition: all 0.3s ease;
+}
+
+.secao-lateral h2{
+    color: var(--cor4);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.secao-lateral .sidebar{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.secao-lateral .sidebar .item,
+.secao-lateral .logout{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--cor7);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.secao-lateral .sidebar .item.active h3,
+.secao-lateral .sidebar .item.active i,
+.secao-lateral .sidebar .item:hover,
+.secao-lateral .logout:hover{
+    color: var(--cor2);
+}
+
+.main{
+    flex: 6;
+    padding: 25px;
+}
+
+.main .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main .header .barra-pesquisa{
+    background: #fff;
+    display: flex;
+    align-items: center;
+    width: 75%;
+    padding: 8px 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+}
+
+.main .header .barra-pesquisa button{
+    font-size: 20px;  
+    border: none;
+    background: transparent; 
+}
+
+.main .header .barra-pesquisa input{
+    padding: 4px 6px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.main .header .barra-pesquisa i{
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.main .header .icons-butns{
+    display: flex;
+    gap: 8px;
+}
+
+.main .header .icons-butns i{
+    font-size: 20px;
+    background: var(--cor4);
+    padding: 8px;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.main .header .icons-butns i:hover{
+    background: var(--cor2);
+}
+
+.main .header .icons-butns i#menu-btn{
+    display: none;
+}
+
+.main .separator{
+    margin: 35px 0 20px;
+    font-weight: 500;
+    color: var(--cor3);
+}
+
+.main .catalogo-acesso{
+    border: 2px solid;
+    border-style: dashed;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.main .catalogo-acesso .card{
+    display: flex;
+    position: relative;
+    width: 230px;
+    height: 300px;
+}
+
+.main .catalogo-acesso .card#c1{
+    background: url('../imagens/leite-po.png') center;
+    background-size: cover;
+}
+
+.main .catalogo-acesso .card#c2{
+    background: url('../imagens/coca-cola.png') center;
+    background-size: cover;
+}
+
+.main .catalogo-acesso .card#c3{
+    background: url('../imagens/arroz.jpeg') center;
+    background-size: cover;
+}
+
+.main .catalogo-acesso .card p#desc{
+    display: none;
+    border-radius:  20px 20px 0px 0px;
+    margin-top: 8px;
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    padding: 8px;
+    text-align: center;
+    background: var(--cor2);
+    color: #fff;
+    transition: opacity 0.5s ease;
+}
+
+.main .catalogo-acesso .card p#desc button{
+    margin-top: 15px;
+    width: 100px;
+    height: 25px;
+    border: none;
+    border-radius: 45px;
+    outline: none;
+    cursor: pointer;
+    background: var(--cor1);
+}
+
+
+
+.main .catalogo-marca{
+    display: flex;
+    flex-direction: column;
+    columns: 2;
+    border: 2px solid;
+    border-style: dashed;
+    height: 300px;
+}
+
+.main .catalogo-marca .cardm{
+    border: 2px solid purple;
+    width: 70%; 
+    height: 25%;
+}
+
+.right-section{
+    flex: 2;
 }

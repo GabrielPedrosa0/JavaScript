@@ -3,21 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
     <link rel="stylesheet" href="estilo/style2.css">
     <title>Catálogo de Produtos</title>
 </head>
 <body>
     
-    <div class="barra-lateral">
-        <h2>Bem Vindo</h2>
+    <!-- barra latera -->
+        <div class="secao-lateral">
+            <div class="sidebar">
+                    <h2>SuperMart</h2>
+                <div class="item active">
+                    <i class='bx bxs-home'></i>
+                    <h3>Home</h3>
+                </div>
+                <div class="item">
+                    <i class='bx bx-cart'></i>
+                    <h3>Carrinho</h3>
+                </div>
+                <div class="item">
+                    <i class='bx bxs-star'></i>
+                    <h3>Favoritos</h3>
+                </div>
+                <div class="item">
+                    <i class='bx bxs-purchase-tag-alt' ></i>
+                    <h3>Promoções</h3>
+                </div>
+                <div class="item">
+                    <i class='bx bxs-user' ></i>
+                    <h3>Perfil</h3>
+                </div>
+            </div>
 
-        <div class="item-active">
-            <i class="fa-solid fa-house"></i>
-            <h3>Home</h3>
+            <div class="logout">
+                <i class='bx bx-log-out-circle'></i>
+                <h3>Desconectar</h3>
+                
+            </div>
         </div>
+    <!-- fim da barra lateral -->
+
+    
+    <div class="main">
+        <div class="header">
+            <div class="barra-pesquisa">
+                <button><i class='bx bx-search-alt-2'></i></button>
+                <input type="text" id="ipesq" placeholder="Search">
+                <i class='bx bx-cog bx-flip-horizontal' ></i>
+            </div>
+            <div class="icons-butns">
+                <i class='bx bx-bell bx-flip-horizontal' ></i>
+                <i class='bx bx-message-square-dots'></i>
+                <i class='bx bx-menu bx-flip-horizontal' id="menu-btn"></i>
+            </div>
+        </div>
+
+        <h3 class="separator">
+            Produtos em promoção
+        </h3>
+
+        <div class="catalogo-acesso">
+            <div class="card" id="c1">
+                <p id="desc">
+                    Leite em pó itambé Integral 200g 
+                    <br>
+                    <button><i class='bx bx-cart'></i> Adicionar</button>
+                </p>
+            </div>
+            <div class="card" id="c2">
+                <p id="desc">
+                    Refrigerante Coca-cola original 2L
+                    <br>
+                    <button><i class='bx bx-cart'></i> Adicionar</button>
+                </p>
+            </div>
+            <div class="card" id="c3">
+                <p id="desc">
+                    Arroz Branco Tipo 1 Emoções 1Kg
+                    <br>
+                    <button><i class='bx bx-cart'></i> Adicionar</button>
+                </p>
+            </div>
+            <div class="card" id="c4">k</div>
+        </div>
+
+        <h3 class="separator">
+            Marcas
+        </h3>
+
+        <div class="catalogo-marca">
+            <div class="cardm" id="c5">k</div>
+            <div class="cardm" id="c6">k</div>
+            <div class="cardm" id="c7">k</div>
+            <div class="cardm" id="c8">k</div>
+        </div>
+
     </div>
 
+    <div class="right-section">
+
+    </div>
+
+   
 
     <script src="script/acoes3.js"></script>
 
